@@ -270,3 +270,53 @@ nav ul {
     }
 
 }
+/* ABOUT PAGE - VALUES */
+
+.values {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 30px;
+}
+
+.values h2 {
+    text-align: center;
+    color: #071d33;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.value-card h3 {
+    color: #d4a017;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+
+/* MOBILE VALUES */
+
+@media(max-width: 900px) {
+
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
