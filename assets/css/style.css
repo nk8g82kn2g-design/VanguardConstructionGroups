@@ -1,78 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    background: #f5f6f8;
-    line-height: 1.6;
+    color:#333;
+    background:#f5f6f8;
+    line-height:1.6;
 }
 
 
 /* HEADER */
 
 header {
-    background: #071d33;
-    color: white;
-    padding: 15px 50px;
-    position: relative;
-    z-index: 1000;
+    background:#071d33;
+    color:white;
+    padding:15px 40px;
 }
 
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-
-.logo {
-    width: 90px;
-    height: 90px;
-}
-
-
-.logo svg {
-    width: 90px;
-    height: 90px;
-    display: block;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
 }
 
 
 .brand h1 {
-    color: white;
-    font-size: 26px;
+    color:white;
+    font-size:24px;
 }
 
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 
 nav a:hover {
-    color: #d4a017;
+    color:#d4a017;
 }
 
 
@@ -80,282 +58,73 @@ nav a:hover {
 
 .hero {
 
-    min-height: 55vh;
+    min-height:300px;
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
 
-    text-align: center;
+    text-align:center;
 
-    color: white;
+    color:white;
+
 
     background:
     linear-gradient(
-        rgba(0,0,0,.65),
-        rgba(0,0,0,.65)
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)
     ),
     url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600");
 
-    background-size: cover;
-    background-position: center;
+
+    background-size:cover;
+
+    background-position:center;
+
 }
 
 
 .hero-content {
-    max-width: 900px;
-    padding: 30px;
+    padding:30px;
 }
 
 
 .hero h2 {
-    font-size: 55px;
-    margin-bottom: 20px;
+    font-size:45px;
 }
 
 
 .hero p {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size:20px;
 }
 
-
-.hero a,
-.cta a {
-    display: inline-block;
-    background: #d4a017;
-    color: black;
-    padding: 16px 40px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-/* STATS */
-
-.stats {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    padding: 70px 40px;
-
-}
-
-
-.stats div {
-
-    background: white;
-
-    width: 300px;
-
-    padding: 35px;
-
-    text-align: center;
-
-    border-radius: 15px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);
-
-}
-
-
-.stats h3 {
-
-    color:#071d33;
-
-    font-size:30px;
-
-}
-
-
-/* SECTIONS */
-
-.about,
-.services,
-.projects,
-.values,
-.contact {
-
-    max-width:1200px;
-
-    margin:80px auto;
-
-    padding:30px;
-
-}
-
-
-.about h2,
-.services h2,
-.projects h2,
-.values h2,
-.contact h2 {
-
-    text-align:center;
-
-    color:#071d33;
-
-    font-size:40px;
-
-    margin-bottom:40px;
-
-}
-
-
-/* CARDS */
-
-.services div,
-.service-card,
-.project-card,
-.value-card {
-
-    background:white;
-
-    border-radius:15px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-
-}
-
-
-.service-card {
-
-    padding:35px;
-
-    margin:25px 0;
-
-}
-
-
-.service-card h3,
-.value-card h3 {
-
-    color:#d4a017;
-
-    font-size:28px;
-
-}
-
-
-/* PROJECTS */
-
-.project-grid {
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-
-.project-card {
-
-    overflow:hidden;
-
-}
-
-
-.project-card img {
-
-    width:100%;
-
-    height:250px;
-
-    object-fit:cover;
-
-}
-
-
-.project-card h3,
-.project-card p {
-
-    padding:20px;
-
-}
-
-
-.project-card:hover,
-.value-card:hover {
-
-    transform:translateY(-8px);
-
-    transition:.3s;
-
-}
-
-
-/* VALUES */
-
-.value-grid {
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-
-.value-card {
-
-    padding:35px;
-
-    text-align:center;
-
-}
-
-
-/* CTA */
-
-.cta {
-
-    max-width:1200px;
-
-    margin:80px auto;
-
-    padding:50px;
-
-    background:#071d33;
-
-    color:white;
-
-    text-align:center;
-
-    border-radius:15px;
-
-}
-
-
-.cta h2 {
-
-    color:white;
-
-    font-size:40px;
-
-    margin-bottom:20px;
-
-}
 
 
 /* CONTACT */
 
 .contact {
 
-    position:relative;
+    max-width:900px;
 
-    z-index:1;
+    margin:60px auto;
+
+    padding:30px;
 
 }
+
+
+.contact h2 {
+
+    text-align:center;
+
+    color:#071d33;
+
+    margin-bottom:30px;
+
+}
+
 
 
 .contact form {
@@ -364,15 +133,12 @@ nav a:hover {
 
     padding:40px;
 
-    border-radius:15px;
+    border-radius:12px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
-
-    position:relative;
-
-    z-index:2;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
 
 }
+
 
 
 .contact input,
@@ -387,11 +153,12 @@ nav a:hover {
 
     border:1px solid #ddd;
 
-    border-radius:6px;
+    border-radius:5px;
 
     font-size:16px;
 
 }
+
 
 
 .contact textarea {
@@ -401,11 +168,12 @@ nav a:hover {
 }
 
 
+
 .contact button {
 
     width:100%;
 
-    padding:16px;
+    padding:15px;
 
     background:#d4a017;
 
@@ -415,33 +183,24 @@ nav a:hover {
 
     cursor:pointer;
 
-    border-radius:6px;
-
 }
 
-
-.contact button:hover {
-
-    background:#071d33;
-
-    color:white;
-
-}
 
 
 .contact-info {
 
-    margin-top:40px;
+    margin-top:30px;
 
     background:#071d33;
 
     color:white;
 
-    padding:30px;
+    padding:25px;
 
-    border-radius:12px;
+    border-radius:10px;
 
 }
+
 
 
 /* FOOTER */
@@ -454,15 +213,15 @@ footer {
 
     text-align:center;
 
-    padding:30px;
+    padding:25px;
 
 }
 
 
+
 /* MOBILE */
 
-@media(max-width:900px){
-
+@media(max-width:768px){
 
 nav {
 
@@ -473,38 +232,18 @@ nav {
 
 nav ul {
 
+    margin-top:20px;
+
     flex-direction:column;
 
     text-align:center;
-
-    margin-top:20px;
 
 }
 
 
 .hero h2 {
 
-    font-size:38px;
-
-}
-
-
-.stats,
-.project-grid,
-.value-grid {
-
-    display:grid;
-
-    grid-template-columns:1fr;
-
-}
-
-
-.brand {
-
-    flex-direction:column;
-
-    text-align:center;
+    font-size:32px;
 
 }
 
