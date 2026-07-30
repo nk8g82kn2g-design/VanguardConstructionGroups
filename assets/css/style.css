@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: "Arial", sans-serif;
+    font-family: Arial, sans-serif;
     color: #333;
     background: #f5f6f8;
     line-height: 1.6;
@@ -19,8 +18,7 @@ header {
     background: #071d33;
     color: white;
     padding: 15px 50px;
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 1000;
 }
 
@@ -33,28 +31,29 @@ nav {
 }
 
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
 .logo {
     width: 90px;
+    height: 90px;
 }
 
 
 .logo svg {
     width: 90px;
     height: 90px;
+    display: block;
 }
 
 
-.brand,
-nav h1 {
-    display: flex;
-    align-items: center;
-}
-
-
-nav h1 {
+.brand h1 {
     color: white;
     font-size: 26px;
-    margin-left: 15px;
 }
 
 
@@ -77,12 +76,11 @@ nav a:hover {
 }
 
 
-
 /* HERO */
 
 .hero {
 
-    min-height: 90vh;
+    min-height: 55vh;
 
     display: flex;
 
@@ -94,23 +92,16 @@ nav a:hover {
 
     color: white;
 
-
     background:
-
     linear-gradient(
         rgba(0,0,0,.65),
         rgba(0,0,0,.65)
     ),
-
     url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600");
 
-
     background-size: cover;
-
     background-position: center;
-
 }
-
 
 
 .hero-content {
@@ -120,46 +111,30 @@ nav a:hover {
 
 
 .hero h2 {
-
-    font-size: 60px;
-
-    margin-bottom: 25px;
-
+    font-size: 55px;
+    margin-bottom: 20px;
 }
 
 
 .hero p {
-
     font-size: 22px;
-
-    margin-bottom: 35px;
-
+    margin-bottom: 30px;
 }
 
 
 .hero a,
 .cta a {
-
     display: inline-block;
-
     background: #d4a017;
-
-    color: #000;
-
+    color: black;
     padding: 16px 40px;
-
     border-radius: 6px;
-
     text-decoration: none;
-
     font-weight: bold;
-
 }
 
 
-
 /* STATS */
-
 
 .stats {
 
@@ -169,7 +144,7 @@ nav a:hover {
 
     gap: 30px;
 
-    padding: 80px 40px;
+    padding: 70px 40px;
 
 }
 
@@ -191,7 +166,6 @@ nav a:hover {
 }
 
 
-
 .stats h3 {
 
     color:#071d33;
@@ -201,9 +175,7 @@ nav a:hover {
 }
 
 
-
-/* GENERAL SECTIONS */
-
+/* SECTIONS */
 
 .about,
 .services,
@@ -218,7 +190,6 @@ nav a:hover {
     padding:30px;
 
 }
-
 
 
 .about h2,
@@ -238,16 +209,12 @@ nav a:hover {
 }
 
 
-
-
 /* CARDS */
-
 
 .services div,
 .service-card,
 .project-card,
 .value-card {
-
 
     background:white;
 
@@ -258,7 +225,6 @@ nav a:hover {
 }
 
 
-
 .service-card {
 
     padding:35px;
@@ -266,7 +232,6 @@ nav a:hover {
     margin:25px 0;
 
 }
-
 
 
 .service-card h3,
@@ -279,9 +244,7 @@ nav a:hover {
 }
 
 
-
 /* PROJECTS */
-
 
 .project-grid {
 
@@ -294,13 +257,11 @@ nav a:hover {
 }
 
 
-
 .project-card {
 
     overflow:hidden;
 
 }
-
 
 
 .project-card img {
@@ -314,14 +275,12 @@ nav a:hover {
 }
 
 
-
 .project-card h3,
 .project-card p {
 
     padding:20px;
 
 }
-
 
 
 .project-card:hover,
@@ -334,11 +293,7 @@ nav a:hover {
 }
 
 
-
-
-
 /* VALUES */
-
 
 .value-grid {
 
@@ -360,9 +315,7 @@ nav a:hover {
 }
 
 
-
 /* CTA */
-
 
 .cta {
 
@@ -383,7 +336,6 @@ nav a:hover {
 }
 
 
-
 .cta h2 {
 
     color:white;
@@ -395,8 +347,15 @@ nav a:hover {
 }
 
 
-
 /* CONTACT */
+
+.contact {
+
+    position:relative;
+
+    z-index:1;
+
+}
 
 
 .contact form {
@@ -409,8 +368,11 @@ nav a:hover {
 
     box-shadow:0 10px 30px rgba(0,0,0,.1);
 
-}
+    position:relative;
 
+    z-index:2;
+
+}
 
 
 .contact input,
@@ -427,8 +389,9 @@ nav a:hover {
 
     border-radius:6px;
 
-}
+    font-size:16px;
 
+}
 
 
 .contact textarea {
@@ -436,7 +399,6 @@ nav a:hover {
     height:150px;
 
 }
-
 
 
 .contact button {
@@ -453,8 +415,18 @@ nav a:hover {
 
     cursor:pointer;
 
+    border-radius:6px;
+
 }
 
+
+.contact button:hover {
+
+    background:#071d33;
+
+    color:white;
+
+}
 
 
 .contact-info {
@@ -472,9 +444,7 @@ nav a:hover {
 }
 
 
-
 /* FOOTER */
-
 
 footer {
 
@@ -489,9 +459,7 @@ footer {
 }
 
 
-
 /* MOBILE */
-
 
 @media(max-width:900px){
 
@@ -525,11 +493,19 @@ nav ul {
 .project-grid,
 .value-grid {
 
-    grid-template-columns:1fr;
-
     display:grid;
+
+    grid-template-columns:1fr;
 
 }
 
+
+.brand {
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
 
 }
