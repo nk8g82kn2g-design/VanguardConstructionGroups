@@ -5,16 +5,16 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
+    font-family: "Arial", sans-serif;
     color: #333;
+    background: #f8f8f8;
     line-height: 1.6;
 }
 
 header {
-    background: #0a2f5c;
+    background: #071d33;
     color: white;
-    padding: 20px 50px;
+    padding: 20px 60px;
 }
 
 nav {
@@ -25,12 +25,13 @@ nav {
 
 nav h1 {
     font-size: 28px;
+    font-weight: 700;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 25px;
+    list-style: none;
+    gap: 30px;
 }
 
 nav a {
@@ -39,32 +40,135 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #d4a017;
+}
+
+
+/* HERO */
+
 .hero {
-    background: linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
     ),
-    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600");
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600");
 
     background-size: cover;
     background-position: center;
-    color: white;
-    text-align: center;
-    padding: 150px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
 }
 
 .hero h2 {
-    font-size: 55px;
-    margin-bottom: 20px;
+    font-size: 60px;
+    margin-bottom: 25px;
 }
 
 .hero p {
     font-size: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .hero a {
-    background: #f5b400;
+    background: #d4a017;
+    color: black;
+    padding: 16px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* STATS */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 70px 50px;
+}
+
+.stats div {
+    background: white;
+    padding: 35px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.stats h3 {
+    color: #071d33;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+
+/* SECTIONS */
+
+.about,
+.services,
+.cta {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 30px;
+}
+
+.about h2,
+.services h2,
+.cta h2 {
+    text-align: center;
+    color: #071d33;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+/* SERVICES */
+
+.services div {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.services h3 {
+    color: #d4a017;
+    margin-bottom: 10px;
+}
+
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    background: #071d33;
+    color: white;
+    border-radius: 10px;
+}
+
+.cta h2 {
+    color: white;
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 25px;
+    background: #d4a017;
     color: black;
     padding: 15px 35px;
     text-decoration: none;
@@ -72,68 +176,38 @@ nav a {
     font-weight: bold;
 }
 
-.about,
-.services,
-.cta {
-    max-width: 1200px;
-    margin: 70px auto;
-    padding: 20px;
-}
 
-.about h2,
-.services h2,
-.cta h2 {
-    color: #0a2f5c;
-    margin-bottom: 20px;
-}
-
-.services div {
-    background: white;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.services h3 {
-    color: #0a2f5c;
-    margin-bottom: 10px;
-}
-
-.cta {
-    text-align: center;
-}
-
-.cta a {
-    display: inline-block;
-    margin-top: 20px;
-    background: #0a2f5c;
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 5px;
-}
+/* FOOTER */
 
 footer {
-    background: #111;
+    background: #050505;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
 }
 
-@media(max-width: 768px) {
 
-    nav {
-        flex-direction: column;
-    }
+/* MOBILE */
 
-    nav ul {
-        margin-top: 20px;
-        flex-direction: column;
-        text-align: center;
-    }
+@media(max-width:768px){
 
-    .hero h2 {
-        font-size: 35px;
-    }
+nav {
+    flex-direction: column;
+}
+
+nav ul {
+    margin-top:20px;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h2 {
+    font-size:38px;
+}
+
+.stats {
+    flex-direction:column;
+    align-items:center;
+}
+
 }
